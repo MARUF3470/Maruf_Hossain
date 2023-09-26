@@ -1,13 +1,23 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import img from "@/assets/Maruf1-removebg-preview.png";
 import img2 from "@/assets/signature.png";
 import img3 from "@/assets/my-works.png";
 import Marquee from "react-fast-marquee";
 import { RxDoubleArrowRight } from "react-icons/rx";
+import { useEffect } from "react";
 const FirstGrid = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="grid grid-cols-4 grid-rows-5 gap-4 w-full mt-24">
+    <div
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      className="grid grid-cols-4 grid-rows-5 gap-4 w-full mt-24"
+    >
       <div className="row-span-5 col-span-2  rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950">
         <div class="p-10 flex items-center justify-center gap-6 ">
           <Image
@@ -28,7 +38,7 @@ const FirstGrid = () => {
               Maruf <br /> Hossain.
             </h1>
             <p className="text-xs text-zinc-500">
-              I am a Full Stack Web Developer based on MERN Stack
+              I am a Full Stack Web Developer based on MERN Stack.
             </p>
             <p className="text-3xl flex justify-end">
               <RxDoubleArrowRight />
@@ -40,7 +50,7 @@ const FirstGrid = () => {
         <Marquee className="text-xs">
           FULL STACK * FRONT-END * BACK-END * TAILWIND-CSS * JAVASCRIPT *
           TYPESCRIPT * REACT * NEXT.JS * REDUX * NODE.JS * EXPRESS.JS * MONGO DB
-          * FIREBASE * GITHUB
+          * FIREBASE * GITHUB *
         </Marquee>
       </div>
       <div className="row-span-4 rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5">

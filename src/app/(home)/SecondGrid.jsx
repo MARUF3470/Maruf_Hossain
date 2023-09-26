@@ -1,5 +1,8 @@
+"use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import { GiSpiderWeb } from "react-icons/gi";
 import {
@@ -11,9 +14,16 @@ import {
 } from "react-icons/pi";
 import img from "@/assets/blog.png";
 const SecondGrid = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className=" grid grid-cols-4 my-6 gap-4">
-      <div className="rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5">
+      <div
+        data-aos="zoom-in-right"
+        data-aos-duration="1000"
+        className="rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5"
+      >
         <Image
           src={img}
           alt="Maruf Hossain signature"
@@ -36,7 +46,11 @@ const SecondGrid = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-2 rounded-3xl flex-none bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5 h-full">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className="col-span-2 rounded-3xl flex-none bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5 h-full"
+      >
         <div className="text-5xl flex items-center justify-between w-3/4 h-3/4 mx-auto">
           <PiCameraLight />
           <PiPencilCircleLight />
@@ -55,7 +69,11 @@ const SecondGrid = () => {
           </div>
         </div>
       </div>
-      <div className="rounded-3xl flex-none bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5 h-full">
+      <div
+        data-aos="zoom-in-left"
+        data-aos-duration="1000"
+        className="rounded-3xl flex-none bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5 h-full"
+      >
         <div className=" glass flex w-11/12 mx-auto h-24 rounded-3xl py-14">
           <div className="w-1/2  flex justify-evenly items-center">
             <button className="rounded-full text-4xl border p-5 ">
