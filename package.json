@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "next": "latest",
+    "postcss": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-fast-marquee": "^1.6.1",
+    "react-icons": "^4.11.0",
+    "tailwindcss": "latest"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "daisyui": "^3.8.0"
   }
 }
