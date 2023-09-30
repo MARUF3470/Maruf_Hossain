@@ -8,6 +8,7 @@ import img3 from "@/assets/my-works.png";
 import Marquee from "react-fast-marquee";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import { useEffect } from "react";
+import Link from "next/link";
 const FirstGrid = () => {
   useEffect(() => {
     AOS.init();
@@ -18,7 +19,10 @@ const FirstGrid = () => {
       data-aos-duration="1000"
       className="grid grid-cols-4 grid-rows-5 gap-4 w-full mt-24"
     >
-      <div className="row-span-5 col-span-2  rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950">
+      <Link
+        href="/about"
+        className="row-span-5 col-span-2  rounded-3xl bg-gradient-to-r from-base-200 to-base-300"
+      >
         <div class="p-10 flex items-center justify-center gap-6 ">
           <Image
             src={img}
@@ -45,15 +49,21 @@ const FirstGrid = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="col-span-2 rounded-3xl flex items-center bg-gradient-to-r from-stone-900 to-stone-950 px-5">
+      </Link>
+      <Link
+        href=""
+        className="col-span-2 rounded-3xl flex items-center  bg-gradient-to-r from-base-200 to-base-300 px-5"
+      >
         <Marquee className="text-xs">
           FULL STACK * FRONT-END * BACK-END * TAILWIND-CSS * JAVASCRIPT *
           TYPESCRIPT * REACT * NEXT.JS * REDUX * NODE.JS * EXPRESS.JS * MONGO DB
           * FIREBASE * GITHUB *
         </Marquee>
-      </div>
-      <div className="row-span-4 rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5">
+      </Link>
+      <Link
+        href="/credential"
+        className="row-span-4 rounded-3xl  bg-gradient-to-r from-base-200 to-base-300 px-5 py-5"
+      >
         <Image
           src={img2}
           alt="Maruf Hossain signature"
@@ -75,8 +85,11 @@ const FirstGrid = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="row-span-4 rounded-3xl bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5">
+      </Link>
+      <Link
+        href=""
+        className="row-span-4 rounded-3xl  bg-gradient-to-r from-base-200 to-base-300 px-5 py-5"
+      >
         <Image
           src={img3}
           alt="Maruf Hossain signature"
@@ -98,7 +111,7 @@ const FirstGrid = () => {
             </p>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

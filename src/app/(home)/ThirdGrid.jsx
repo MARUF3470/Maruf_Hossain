@@ -1,6 +1,7 @@
 "use client";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 import { useEffect } from "react";
 import { GiFallingStar } from "react-icons/gi";
 import { RxDoubleArrowRight } from "react-icons/rx";
@@ -14,7 +15,10 @@ const ThirdGrid = () => {
       data-aos-duration="1000"
       className="grid grid-cols-2 gap-4 mb-10 lg:mb-32"
     >
-      <div className="rounded-3xl flex-none bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-5 h-full">
+      <Link
+        href=""
+        className="rounded-3xl flex-none  bg-gradient-to-r from-base-200 to-base-300 px-5 py-5 h-full"
+      >
         <div className="grid grid-cols-3 gap-3 h-full">
           <div className="rounded-3xl h-full flex flex-col justify-center text-center text-white  bg-gradient-to-r from-stone-800 to-stone-700">
             <h1 className="text-4xl">02</h1>
@@ -29,8 +33,11 @@ const ThirdGrid = () => {
             <p className="text-stone-500 text-xs">TOTAL PROJECTS</p>
           </div>
         </div>
-      </div>
-      <div className="rounded-3xl flex-none bg-gradient-to-r from-stone-900 to-stone-950 px-5 py-8 h-full">
+      </Link>
+      <Link
+        href=""
+        className="rounded-3xl flex-none  bg-gradient-to-r from-base-200 to-base-300 px-5 py-8 h-full"
+      >
         <GiFallingStar className="text-5xl" />
         <div className="flex items-end justify-between">
           <h1 className="text-5xl text-white">
@@ -41,7 +48,7 @@ const ThirdGrid = () => {
             <RxDoubleArrowRight />
           </h1>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

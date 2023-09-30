@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 const inter = Poppins({
@@ -11,18 +12,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const menu = (
     <div className="lg:flex">
-      <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
-        Home
-      </button>
-      <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
-        About
-      </button>
-      <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
-        Works
-      </button>
-      <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
-        Contacts
-      </button>
+      <Link href="/">
+        <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
+          Home
+        </button>
+      </Link>
+      <Link href="/about">
+        <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
+          about
+        </button>
+      </Link>
+      <Link href="/projects">
+        <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
+          works
+        </button>
+      </Link>
+      <Link href="/contacts">
+        <button className="block btn btn-xs bg-transparent border-0 font-normal uppercase text-gray-500">
+          contacts
+        </button>
+      </Link>
     </div>
   );
   return (
