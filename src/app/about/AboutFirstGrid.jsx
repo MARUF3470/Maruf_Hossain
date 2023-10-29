@@ -12,7 +12,7 @@ const AboutFirstGrid = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 justify-center items-center gap-7">
+    <div className="grid lg:grid-cols-3 justify-center items-center gap-7">
       <div
         data-aos="zoom-in-right"
         data-aos-duration="1000"
@@ -32,21 +32,25 @@ const AboutFirstGrid = () => {
       <div
         data-aos="zoom-in-left"
         data-aos-duration="1000"
-        className="col-span-2 mt-5"
+        className="lg:col-span-2 mt-5"
       >
-        <div className="grid grid-rows-3 justify-center items-center">
-          <div className="row-span-1 h-fit">
-            <div className=" flex justify-center items-center">
-              <GoNorthStar className="text-5xl" />
-              <h1 className="text-white text-7xl font-medium">SELF-SUMMARY</h1>
-              <GoNorthStar className="text-5xl" />
+        <div className="grid lg:grid-rows-3 justify-center items-center">
+          <div className="row-span-1 h-fit mb-10 lg:mb-0">
+            <div className="flex justify-center items-center">
+              <GoNorthStar className="text-xl mr-2 lg:text-5xl" />
+              <h1 className="text-white text-3xl lg:text-7xl font-medium">
+                SELF-SUMMARY
+              </h1>
+              <GoNorthStar className="text-xl ml-2 lg:text-5xl" />
             </div>
           </div>
-          <div className="row-span-2 p-5 bg-base-200 rounded-3xl">
+          <div className="lg:row-span-2 p-5 bg-base-200 rounded-3xl">
             <div>
-              <GiFallingStar className="text-5xl mb-10" />
+              <GiFallingStar className="text-5xl mb-5" />
               <div className="p-4">
-                <h1 className="text-5xl text-white">Maruf Hossain.</h1>
+                <h1 className="text-3xl lg:text-5xl text-white mb-3">
+                  Maruf Hossain.
+                </h1>
                 <p className="text-sm text-zinc-500">
                   I am a MERN Full Stack Web Developer, working on this field
                   for the last 2 years. I can build modern website with modern

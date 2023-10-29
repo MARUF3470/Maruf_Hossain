@@ -7,7 +7,7 @@ const AboutSecondGrid = () => {
     AOS.init();
   }, []);
   return (
-    <div className="grid grid-cols-2 gap-4 my-4">
+    <div className="grid lg:grid-cols-2 gap-4 my-4">
       <div
         data-aos="zoom-in-right"
         data-aos-duration="1000"
