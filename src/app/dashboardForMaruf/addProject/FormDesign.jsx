@@ -44,10 +44,13 @@ const FormDesign = () => {
       formData.append(`images[${i}]`, pictures[i][0]);
       formData.append(`features[${i}]`, features[i]);
     }
-    const data = await fetch("http://localhost:3000/api/projects", {
-      method: "POST",
-      body: formData,
-    });
+    const data = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
     const result = await data.json();
     if (result.success) {
       reset();

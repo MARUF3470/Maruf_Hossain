@@ -45,7 +45,6 @@ export const POST = async (req) => {
             });
         }
     }
-    console.log(imageFilesWithFeatures);
     const savedProducts = await Project.create({ name, description, type, liveSite, clientSide, serverSite, technologies, imageFilesWithFeatures });
     return NextResponse.json({ 'message': 'file uploaded successfully', success: true })
 }

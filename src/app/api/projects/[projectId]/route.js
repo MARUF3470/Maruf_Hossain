@@ -5,7 +5,6 @@ import { NextResponse } from "next/server"
 
 export const GET = async (req, content) => {
     const id = content.params.projectId
-    console.log(id);
     const query = { _id: id }
     await mongoose.connect(uri)
     const result = await Project.findById(query)
