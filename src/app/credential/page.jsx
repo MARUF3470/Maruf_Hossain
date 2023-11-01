@@ -120,7 +120,7 @@ const CredentialPage = () => {
               <p className="text-sm">Database / Authentication</p>
             </div>
             <div className="my-6">
-              <p className="text-zinc-500 text-sm">85%</p>
+              <p className="text-zinc-500 text-sm">80%</p>
               <h3 className="text-white text-lg font-medium">NodeJS</h3>
               <p className="text-sm">Open-source Server Environment</p>
             </div>
@@ -135,7 +135,7 @@ const CredentialPage = () => {
               <p className="text-sm">NoSQL Database</p>
             </div>
             <div className="my-6">
-              <p className="text-zinc-500 text-sm">85%</p>
+              <p className="text-zinc-500 text-sm">80%</p>
               <h3 className="text-white text-lg font-medium">PostgreSQL</h3>
               <p className="text-sm">Relational Database</p>
             </div>
