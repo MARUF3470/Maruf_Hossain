@@ -102,6 +102,11 @@ const CredentialPage = () => {
               <h3 className="text-white text-lg font-medium">NextJs</h3>
               <p className="text-sm">React Full Stack Framework</p>
             </div>
+            <div className="my-6">
+              <p className="text-zinc-500 text-sm">80%</p>
+              <h3 className="text-white text-lg font-medium">Prisma</h3>
+              <p className="text-sm">Object-Relational Mapping (ORM)</p>
+            </div>
           </div>
           <div>
             <div className="my-6">
@@ -117,17 +122,22 @@ const CredentialPage = () => {
             <div className="my-6">
               <p className="text-zinc-500 text-sm">85%</p>
               <h3 className="text-white text-lg font-medium">NodeJS</h3>
-              <p className="text-sm">React Full Stack Framework</p>
+              <p className="text-sm">Open-source Server Environment</p>
             </div>
             <div className="my-6">
               <p className="text-zinc-500 text-sm">85%</p>
               <h3 className="text-white text-lg font-medium">ExpressJs</h3>
-              <p className="text-sm">React Full Stack Framework</p>
+              <p className="text-sm">Nodejs Framework</p>
             </div>
             <div className="my-6">
               <p className="text-zinc-500 text-sm">85%</p>
               <h3 className="text-white text-lg font-medium">MongoDB</h3>
-              <p className="text-sm">React Full Stack Framework</p>
+              <p className="text-sm">NoSQL Database</p>
+            </div>
+            <div className="my-6">
+              <p className="text-zinc-500 text-sm">85%</p>
+              <h3 className="text-white text-lg font-medium">PostgreSQL</h3>
+              <p className="text-sm">Relational Database</p>
             </div>
             <div className="my-6">
               <p className="text-zinc-500 text-sm">60%</p>
