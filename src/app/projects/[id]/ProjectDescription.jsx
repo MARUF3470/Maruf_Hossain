@@ -4,7 +4,10 @@ import { GoNorthStar } from "react-icons/go";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-const ProjectDescription = ({ result }) => {
+import useSingleProject from "@/hooks/useSingleProject";
+const ProjectDescription = ({ id }) => {
+  const { project, isLoading, isValidating, mutate, error } =
+    useSingleProject(id);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -15,12 +18,12 @@ const ProjectDescription = ({ result }) => {
         data-aos-duration="1000"
         className="font-medium uppercase text-stone-500 text-xs my-5"
       >
-        {result?.type}
+        {project?.type}
       </h3>
       <div data-aos="zoom-in" data-aos-duration="1000" className="flex">
         <GoNorthStar className="text-2xl lg:text-3xl" />
         <h1 className="text-white text-3xl lg:text-5xl font-medium uppercase">
-          {result?.name}
+          {project?.name}
         </h1>
         <GoNorthStar className="text-2xl lg:text-3xl" />
       </div>
@@ -31,7 +34,7 @@ const ProjectDescription = ({ result }) => {
           className="uppercase p-5"
         >
           <h1>Technologies i used in this project are,</h1>
-          {result?.technologies?.map((tech, i) => (
+          {project?.technologies?.map((tech, i) => (
             <li className="text-stone-500 text-xs  list-none" key={i}>
               <GoNorthStar className="inline mr-2 my-1" />
               {tech}
@@ -47,34 +50,34 @@ const ProjectDescription = ({ result }) => {
             <h1 className="uppercase mb-5">Description</h1>
             <p className="text-stone-500 text-xs">
               <GoNorthStar className="inline mr-2 my-1" />
-              {result?.description}
+              {project?.description}
             </p>
           </div>
           <div className="bg-base-300 p-5 rounded-3xl mt-2">
             <h1 className="uppercase mb-5">Important Links</h1>
             <div className="flex flex-wrap gap-2 items-center">
-              <a href={result?.liveSite}>
+              <a href={project?.liveSite}>
                 <button className="text-white bg-zinc-900 text-xs px-6 py-2 rounded-md hover:bg-slate-100 hover:text-black duration-300 active:scale-50">
                   Live Site
                 </button>
               </a>
-              <p className="text-xs text-stone-500">{result?.liveSite}</p>
+              <p className="text-xs text-stone-500">{project?.liveSite}</p>
             </div>
             <div className="flex flex-wrap gap-2 items-center my-1">
-              <a href={result?.clientSide}>
+              <a href={project?.clientSide}>
                 <button className="text-white bg-zinc-900 text-xs px-6 py-2 rounded-md hover:bg-slate-100 hover:text-black duration-300 active:scale-50">
                   Cliet Side
                 </button>
               </a>
-              <p className="text-xs text-stone-500">{result?.clientSide}</p>
+              <p className="text-xs text-stone-500">{project?.clientSide}</p>
             </div>
             <div className="flex flex-wrap gap-2 items-center">
-              <a href={result?.serverSide}>
+              <a href={project?.serverSide}>
                 <button className="text-white bg-zinc-900 text-xs px-6 py-2 rounded-md hover:bg-slate-100 hover:text-black duration-300 active:scale-50">
                   Server Side
                 </button>
               </a>
-              <p className="text-xs text-stone-500">{result?.serverSide}</p>
+              <p className="text-xs text-stone-500">{project?.serverSide}</p>
             </div>
           </div>
         </div>
@@ -87,7 +90,7 @@ const ProjectDescription = ({ result }) => {
           </h1>
           <GoNorthStar className="text-3xl" />
         </div>
-        {result?.imageFilesWithFeatures?.map((image) => (
+        {project?.imageFilesWithFeatures?.map((image) => (
           <div
             key={image?._id}
             className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 my-5 justify-center items-center"

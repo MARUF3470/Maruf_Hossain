@@ -44,17 +44,18 @@ const FormDesign = () => {
       formData.append(`images[${i}]`, pictures[i][0]);
       formData.append(`features[${i}]`, features[i]);
     }
-    const data = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`,
-      {
+    try {
+      const data = await fetch(`/api/projects`, {
         method: "POST",
         body: formData,
+      });
+      const result = await data.json();
+      if (result.success) {
+        reset();
+        return toast.success("Uploaded");
       }
-    );
-    const result = await data.json();
-    if (result.success) {
-      reset();
-      return toast.success("Uploaded");
+    } catch (error) {
+      console.log(error);
     }
   };
   return (
@@ -92,7 +93,7 @@ const FormDesign = () => {
           <span className="label-text text-xs">Type *</span>
         </label>
         <select
-          className="select select-bordered text-xs rounded-sm mt-1 focus:outline-none focus:border-violet-700 transition duration-500 flex-grow"
+          className="block select select-bordered text-xs rounded-sm mt-1 focus:outline-none focus:border-violet-700 transition duration-500 flex-grow"
           {...register("type", { required: "Select One" })}
         >
           <option value="">Select One</option>
@@ -112,7 +113,7 @@ const FormDesign = () => {
             placeholder="Enter Project Live Link"
             className="input text-xs input-bordered w-3/4 lg:w-1/2 block py-2 px-4 rounded-sm mt-1 focus:outline-none focus:border-violet-700 transition duration-500 flex-grow"
           />
-          {errors.name && (
+          {errors.liveSite && (
             <p className="text-red-500">{errors.liveSite.message}</p>
           )}
         </label>
@@ -126,7 +127,7 @@ const FormDesign = () => {
             placeholder="Enter Project Client Side Code Link"
             className="input text-xs input-bordered w-3/4 lg:w-1/2 block py-2 px-4 rounded-sm mt-1 focus:outline-none focus:border-violet-700 transition duration-500 flex-grow"
           />
-          {errors.name && (
+          {errors.clientSide && (
             <p className="text-red-500">{errors.clientSide.message}</p>
           )}
         </label>
@@ -140,7 +141,7 @@ const FormDesign = () => {
             placeholder="Enter Project Server Side Code Link"
             className="input text-xs input-bordered w-3/4 lg:w-1/2 block py-2 px-4 rounded-sm mt-1 focus:outline-none focus:border-violet-700 transition duration-500 flex-grow"
           />
-          {errors.name && (
+          {errors.serverSide && (
             <p className="text-red-500">{errors.serverSide.message}</p>
           )}
         </label>

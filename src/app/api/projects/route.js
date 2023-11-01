@@ -4,7 +4,7 @@ const { uri } = require("@/services/DbConnect")
 const { default: mongoose } = require("mongoose")
 const { NextResponse } = require("next/server")
 
-export const GET = async () => {
+export const GET = async (req) => {
     let data = []
     try {
         await mongoose.connect(uri)
@@ -23,7 +23,7 @@ export const POST = async (req) => {
     const type = await data.get('type')
     const liveSite = await data.get('liveSite')
     const clientSide = await data.get('clientSide')
-    const serverSite = await data.get('serverSite')
+    const serverSide = await data.get('serverSide')
     const technologiesData = await data.get('technologies')
     const technologies = technologiesData.split(',')
 
@@ -45,6 +45,6 @@ export const POST = async (req) => {
             });
         }
     }
-    const savedProducts = await Project.create({ name, description, type, liveSite, clientSide, serverSite, technologies, imageFilesWithFeatures });
+    const savedProducts = await Project.create({ name, description, type, liveSite, clientSide, serverSide, technologies, imageFilesWithFeatures });
     return NextResponse.json({ 'message': 'file uploaded successfully', success: true })
 }

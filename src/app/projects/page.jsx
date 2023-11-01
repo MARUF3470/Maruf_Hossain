@@ -5,14 +5,15 @@ import Project from "./Project";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import useProject from "@/hooks/useProject";
 const ProjectPage = async () => {
+  const { isLoading, mutate, projects, isValidating } = useProject();
   useEffect(() => {
     AOS.init();
   }, []);
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`, {
-    cache: "no-cache",
-  });
-  const result = await data.json();
+  if (isLoading) {
+    return <h1>Loading....</h1>;
+  }
   return (
     <div className="grid lg:grid-cols-3 gap-7 my-20">
       <div
@@ -20,7 +21,7 @@ const ProjectPage = async () => {
         data-aos-duration="1000"
         className="card row-span-2 h-fit rounded-3xl p-5 bg-gradient-to-r from-base-200 to-base-300 shadow-xl"
       >
-        <Project project={result[0]} />
+        <Project project={projects[0]} />
       </div>
       <div className="lg:col-span-2 h-fit">
         <div
@@ -35,13 +36,22 @@ const ProjectPage = async () => {
           <GoNorthStar className="text-2xl lg:text-5xl" />
         </div>
       </div>
-      {result[1] && (
+      {projects[1] && (
         <div
           data-aos="zoom-in-left"
           data-aos-duration="1000"
           className="card row-span-2 h-fit rounded-3xl p-5 bg-gradient-to-r from-base-200 to-base-300 shadow-xl"
         >
-          <Project project={result[1]} />
+          <Project project={projects[1]} />
+        </div>
+      )}
+      {projects[2] && (
+        <div
+          data-aos="zoom-in-left"
+          data-aos-duration="1000"
+          className="card row-span-2 h-fit rounded-3xl p-5 bg-gradient-to-r from-base-200 to-base-300 shadow-xl"
+        >
+          <Project project={projects[2]} />
         </div>
       )}
     </div>
