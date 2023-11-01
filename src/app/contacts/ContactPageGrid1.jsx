@@ -54,9 +54,9 @@ const ContactPageGrid1 = () => {
           >
             <a
               href="mailto:smmaruf25@gmail.com"
-              className="bg-gradient-to-r from-base-300 to-base-200 p-5 rounded-lg"
+              className="bg-gradient-to-r from-base-300 to-base-200 p-5 hover:bg-gradient-to-r hover:from-slate-300 hover:to-slate-500 hover:text-black duration-300 rounded-lg active:scale-75 duration-300"
             >
-              <BsMailbox className="text-3xl text-white" />
+              <BsMailbox className="text-3xl" />
             </a>
             <div>
               <h4 className="text-stone-700 text-sm font-medium">MAIL ME</h4>
@@ -109,7 +109,7 @@ const ContactPageGrid1 = () => {
           <h1
             data-aos="fade-up-right"
             data-aos-duration="1000"
-            className="font-medium mb-4 mt-10"
+            className="font-medium mb-4 mt-10 text-white"
           >
             SOCIAL INFO
           </h1>

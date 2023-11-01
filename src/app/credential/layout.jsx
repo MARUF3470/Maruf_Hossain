@@ -1,5 +1,4 @@
 import Image from "next/image";
-import img from "@/assets/Maruf1-removebg-preview.png";
 import {
   PiTwitterLogoLight,
   PiFilePdfLight,
@@ -7,6 +6,7 @@ import {
 } from "react-icons/pi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import Link from "next/link";
+import { SiGithub } from "react-icons/si";
 export const metadata = {
   title: "CREDENTIAL",
   description: "Portfolio of Maruf Hossain",
@@ -35,19 +35,25 @@ const layout = ({ children }) => {
         </div>
         <div className="flex w-11/12 mx-auto h-24 rounded-3xl py-14">
           <div className="w-1/2  flex justify-evenly items-center">
-            <button className="rounded-full text-2xl border p-3 hover:bg-gradient-to-r hover:from-slate-300 hover:border-none hover:to-slate-500 hover:text-black duration-300 active:scale-75">
-              <SlSocialLinkedin />
-            </button>
+            <a href="https://www.linkedin.com/in/s-m-maruf-hossain/">
+              <button className="rounded-full text-2xl border p-3 hover:bg-gradient-to-r hover:from-slate-300 hover:border-none hover:to-slate-500 hover:text-black duration-300 active:scale-75">
+                <SlSocialLinkedin />
+              </button>
+            </a>
           </div>
           <div className="w-1/2 flex justify-center items-center">
-            <button className="rounded-full text-2xl border p-3 hover:bg-gradient-to-r hover:from-slate-300 hover:to-slate-500 hover:border-none hover:text-black duration-300 active:scale-75">
-              <PiTwitterLogoLight />
-            </button>
+            <a href="https://twitter.com/Maruf_3470">
+              <button className="rounded-full text-2xl border p-3 hover:bg-gradient-to-r hover:from-slate-300 hover:to-slate-500 hover:border-none hover:text-black duration-300 active:scale-75">
+                <PiTwitterLogoLight />
+              </button>
+            </a>
           </div>
           <div className="w-1/2 flex justify-center items-center">
-            <button className="rounded-full text-2xl border p-3 hover:bg-gradient-to-r hover:from-slate-300 hover:to-slate-500 hover:border-none hover:text-black duration-300 active:scale-75">
-              <PiInstagramLogoLight />
-            </button>
+            <a href="https://github.com/MARUF3470">
+              <button className="rounded-full text-2xl border p-3 hover:bg-gradient-to-r hover:from-slate-300 hover:to-slate-500 hover:border-none hover:text-black duration-300 active:scale-75">
+                <SiGithub />
+              </button>
+            </a>
           </div>
           <div className="w-1/2 flex justify-center items-center">
             <a href="/Maruf_Resume (4).pdf" download="Maruf_Resume">

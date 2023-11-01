@@ -74,7 +74,7 @@ const AboutThirdGrid = () => {
         className="col-span-2 rounded-3xl flex-none  bg-gradient-to-r from-base-200 to-base-300 px-5 py-5 h-full"
         whileTap={{ scale: 0.9 }}
       >
-        <Link href="">
+        <Link href="/contacts">
           <GiFallingStar className="text-5xl" />
           <div className="flex items-end justify-between">
             <h1 className="text-5xl text-white">
@@ -93,7 +93,7 @@ const AboutThirdGrid = () => {
         className="col-span-2 lg:col-span-1 rounded-3xl flex-none  bg-gradient-to-r from-base-200 to-base-300 px-5 py-5 h-full"
         whileTap={{ scale: 0.9 }}
       >
-        <Link href="">
+        <Link href="/credential">
           <Image
             src={img2}
             alt="Maruf Hossain signature"
