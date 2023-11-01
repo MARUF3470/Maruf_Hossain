@@ -20,7 +20,7 @@ const layout = ({ children }) => {
         className="col-span-2 lg:col-span-1 bg-base-200 p-4 rounded-3xl h-fit lg:h-[570px]"
       >
         <Image
-          src={img}
+          src="/PXL_20230904_072227829.jpg"
           alt="Maruf Hossain "
           width={300}
           height={300}
@@ -29,7 +29,7 @@ const layout = ({ children }) => {
           className="object-cover rounded-3xl w-full"
           sizes="33vw"
         />
-        <div className="text-center mt-10 mb-3">
+        <div className="text-center mt-10">
           <h1 className="text-white font-medium text-3xl">Maruf Hossain</h1>
           <p className="text-sm text-zinc-500">@marufhossain</p>
         </div>
