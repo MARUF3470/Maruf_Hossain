@@ -36,7 +36,7 @@ const ProjectPage = async () => {
           <GoNorthStar className="text-2xl lg:text-5xl" />
         </div>
       </div>
-      {projects[1] && (
+      {/* {projects[1] && (
         <div
           data-aos="zoom-in-left"
           data-aos-duration="1000"
@@ -53,7 +53,7 @@ const ProjectPage = async () => {
         >
           <Project project={projects[2]} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
