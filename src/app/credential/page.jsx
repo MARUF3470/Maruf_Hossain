@@ -70,7 +70,7 @@ const CredentialPage = () => {
       </div>
       <div className="mt-20">
         <h3 className="text-white text-xl font-medium">SKILLS</h3>
-        <div className="w-3/4 flex justify-between">
+        <div className="lg:w-3/4 flex justify-between">
           <div>
             <div className="my-6">
               <p className="text-zinc-500 text-sm">90%</p>

@@ -11,6 +11,7 @@ const ProjectDescription = ({ id }) => {
   useEffect(() => {
     AOS.init();
   }, []);
+  console.log(project);
   return (
     <div>
       <h3

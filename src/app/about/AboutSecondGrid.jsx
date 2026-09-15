@@ -19,6 +19,11 @@ const AboutSecondGrid = () => {
           <h4 className="text-white my-1">Programming Hero</h4>
           <p className="text-zinc-500">Student</p>
         </div>
+        <div>
+          <p className="text-zinc-500">2024 - 2025</p>
+          <h4 className="text-white my-1">Aamira Software Solutions</h4>
+          <p className="text-zinc-500">Software Engineer</p>
+        </div>
         <div className="mt-4">
           <p className="text-zinc-500">2023-Present</p>
           <h4 className="text-white my-1">Fiverr</h4>

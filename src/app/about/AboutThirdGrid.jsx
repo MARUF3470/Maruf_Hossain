@@ -6,11 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import { GiFallingStar } from "react-icons/gi";
-import {
-  PiFilePdfLight,
-  PiTwitterLogoLight,
-  PiVolleyballLight,
-} from "react-icons/pi";
+import { PiFilePdfLight } from "react-icons/pi";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import { useEffect } from "react";
 import { SlSocialLinkedin } from "react-icons/sl";

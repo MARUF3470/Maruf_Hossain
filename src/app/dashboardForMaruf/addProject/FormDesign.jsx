@@ -50,6 +50,7 @@ const FormDesign = () => {
         body: formData,
       });
       const result = await data.json();
+      console.log("dsfsd", result);
       if (result.success) {
         reset();
         return toast.success("Uploaded");
